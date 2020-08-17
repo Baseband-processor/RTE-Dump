@@ -52,3 +52,33 @@ rte_hexdump(f,  title,  buf,  len)
 	}
 	fflush(f);
 
+
+void
+rte_memdump(f, title, buf,  len)
+	FILE *f
+	const char *title
+	const void *buf
+	unsigned int len
+  CODE:		
+	unsigned int i, out;
+	const unsigned char *data = buf;
+	char line[LINE_LEN];
+
+	if (title){
+		fprintf(f, "%s: ", title);
+	}
+	line[0] = '\0';
+	for (i = 0, out = 0; i < len; i++) {
+		if (out >= LINE_LEN - 4) {
+			fprintf(f, "%s", line);
+			out = 0;
+			line[out] = '\0';
+		}
+		out += snprintf(line + out, LINE_LEN - out, "%02x%s", (data[i] & 0xff), ((i + 1) < len) ? ":" : "");
+	}
+	if (out > 0)
+		fprintf(f, "%s", line);
+	fprintf(f, "\n");
+
+	fflush(f);
+
