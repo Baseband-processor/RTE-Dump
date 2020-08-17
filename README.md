@@ -100,7 +100,7 @@ sudo make install
 for now only one:
 
 * rte_hexdump
-
+* rte_memdump [NEW]
 
 **FUTURE DIRECTIONS**
 
