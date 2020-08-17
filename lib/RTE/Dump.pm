@@ -16,7 +16,7 @@ use base qw(Exporter DynaLoader);
 our %EXPORT_TAGS = (
    dump_hex => [qw(
 	rte_hexdump
-      
+        rte_memdump
 
    )],
 );
