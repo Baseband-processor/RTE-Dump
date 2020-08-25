@@ -83,6 +83,51 @@ AAAAAA at [0x99c6fa0], len=22000
 
 ```
 
+RTE_MEMDUMP
+=================================
+**SYNTAX**
+
+As documented also on _rte_hexdump.h_ the functions parameters are 4:
+
+* the pointer of the filehandle
+
+* the "title" of the dump
+
+* the buffer address to print out
+
+* The number of bytes to dump out
+
+Dump out memory in a hex format with colons between bytes
+
+**EXAMPLE**
+
+this small example show the entire functionality of the library (for now):
+
+```perl
+
+#!/usr/bin/perl
+
+no strict;
+use RTE::Dump qw(:dump_hex);
+
+my $file = 'dumper.txt';
+
+open(FILE, '>', $file);
+
+print RTE::Dump::rte_memdump(\FILE, "", \"0xFFFFF", 4096);
+
+
+```
+
+and the format of the dumper.txt file is:
+
+
+```
+
+
+
+```
+
 **REQUIREMENTS**
 
 - [x] perl
