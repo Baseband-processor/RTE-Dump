@@ -101,9 +101,8 @@ Dump out memory in a hex format with colons between bytes
 
 **EXAMPLE**
 
-this small example show the entire functionality of the library (for now):
 
-```perl
+```perl                                                                    
 
 #!/usr/bin/perl
 
@@ -114,7 +113,8 @@ my $file = 'dumper.txt';
 
 open(FILE, '>', $file);
 
-print RTE::Dump::rte_memdump(\FILE, "", \"0xFFFFF", 4096);
+print RTE::Dump::rte_memdump(\FILE, undef, \"0xFFFF", 220);
+
 
 
 ```
@@ -123,7 +123,7 @@ and the format of the dumper.txt file is:
 
 
 ```
-
+: 53:43:41:4c:41:52:28:30:78:39:64:37:66:66:64:38:29:00:00:19:00:00:00:28:3f:5e:3a:5e:5c:64:29:00:00:00:00:00:00:00:00:00:00:00:00:31:00:00:00:2f:75:73:72:2f:73:68:61:72:65:2f:70:65:72:6c:2f:35:2e:32:32:2f:45:78:70:6f:72:74:65:72:2f:48:65:61:76:79:2e:70:6d:00:09:18:70:de:09:11:00:00:00:2c:20:00:00:2e:70:6d:00:10:00:00:00:11:00:00:00:2f:00:d8:09:2a:29:2f:24:00:e7:dc:09:59:00:00:00:00:00:00:00:0d:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:9c:00:00:00:00:02:01:00:01:1f:02:00:2f:00:00:00:00:31:02:00:01:00:00:00:00:2a:02:00:00:10:00:00:00:32:02:00:01:00:00:00:01:1f:02:00:2f:04:00:00:00:04:01:00:00:00:00:00:00:00:00:00:49:00:00:00:01:00:00:00:00
 
 
 ```
@@ -149,7 +149,7 @@ sudo make install
 for now only one:
 
 * rte_hexdump
-* rte_memdump [NEW]
+* rte_memdump 
 
 **FUTURE DIRECTIONS**
 
