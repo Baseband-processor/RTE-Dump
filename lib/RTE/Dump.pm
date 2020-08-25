@@ -76,7 +76,7 @@ As documented also on "rte_hexdump.h" from the dpdk package, the function's para
 
 =head1 AUTHOR
  
-Patrice E<lt>Edoardo Mantovani<gt> 
+<lt>Edoardo Mantovani<gt> 
   
 =head1 COPYRIGHT AND LICENSE
 
