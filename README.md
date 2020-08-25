@@ -6,9 +6,13 @@
 
 **BASIC DOCUMENTATION**
 
-while I was working on dpdk, I found a file named _rte_hexdump.h_ which had only two functions, the first had been implemented here, 
+while I was working on dpdk, I found a file named _rte_hexdump.h_ which had only two functions, both had been implemented here, 
 
-it main use is for dumping memory and printing to a file.
+it main use is for dumping memory and printing it to a file.
+
+
+rte_hexdump
+===============================
 
 **SYNTAX**
 
