@@ -4,5 +4,5 @@
 
 use Test;
 sub BEGIN{ plan_test => 1 }
-use RTE::Dump;
+use RTE::Dump qw( :dump_hex );
 ok(1);
