@@ -6,6 +6,9 @@
 
 **BASIC DOCUMENTATION**
 
+Some Markdown text with <span style="color:blue">some *blue* text</span>.
+
+
 while I was working on dpdk, I found a file named _rte_hexdump.h_ which had only two functions, both had been implemented here, 
 
 it main use is for dumping memory and printing it to a file.
