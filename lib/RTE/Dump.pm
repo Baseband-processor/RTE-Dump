@@ -1,14 +1,11 @@
 package RTE::Dump;
 require  v5.22.1;
 
-#Made by Edoardo Mantovani,2020
+# Made by Edoardo Mantovani,2020
 # initial release
 
 use strict;
 use warnings;
-
-
-
 
 our $VERSION = '0.20';
 use base qw(Exporter DynaLoader);
@@ -72,6 +69,10 @@ As documented also on "rte_hexdump.h" from the dpdk package, the function's para
 * the buffer address to print out
 
 * The number of bytes to dump out
+
+For more info check the official Github repo:
+
+	https://github.com/Baseband-processor/RTE-Dump
 
 
 =head1 AUTHOR
