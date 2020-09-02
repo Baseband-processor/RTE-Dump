@@ -158,7 +158,7 @@ This module won't die here, this is only the first starting point, hope to updat
 
 **Requests and collaborations**
 
-Feel free to email me at <EdoardoMantovani@Lorcon2.com>
+Feel free to email me at <EdoardoMantovani@gmail.com>
 - [x] I am open for suggestions, code improvement, collaboration and other requests
 
 **COPYRIGHT AND LICENCE**
