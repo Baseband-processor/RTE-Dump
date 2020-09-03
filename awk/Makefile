@@ -7,3 +7,5 @@ installation:
 	(cp Dump.so  /usr/local/lib/gawk/)
 	(rm Dump.so)
 	(rm Dump.o)
+	(chmod +x test.awk)
+	(./test.awk)

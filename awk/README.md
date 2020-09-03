@@ -3,10 +3,6 @@ AWK VERSION OF RTE::Dump
 
 This simplified version of RTE::Dump aims to offer the rte_hexdump function into awk programming language.
 
-**REQUIREMENTS**
-
-- [x] gawk version up to 4.21
-- [x] C compiler (gcc is fine)
 
 **INSTALLATION**
 
@@ -27,6 +23,11 @@ function with
 ```awk
 @load "Dump";
 ```
+
+**VERSION**
+
+1.03
+
 
 **Requests and collaborations**
 

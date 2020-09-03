@@ -4,6 +4,7 @@
 	this library is the awk version of RTE::Dump perl library
 	for installation execute the Makefile with sudo priviledges
 	
+	stable version: 1.03
 */
 
 #include <stdio.h>
@@ -27,7 +28,8 @@ static awk_ext_id_t ext_id;
 int plugin_is_GPL_compatible;
 
 
-void do_rte_hexdump(FILE *f,  const char *title,  const void *buf,  unsigned int len)
+void 
+do_rte_hexdump(FILE *f,  const char *title,  const void *buf,  unsigned int len)
 {
 	unsigned int i, out, ofs;
 	const unsigned char *data = buf;
@@ -66,11 +68,11 @@ while (ofs < len) {
 
 static awk_ext_func_t func_table[] = \
 {
-    { "rte_hexdump", do_rte_hexdump, 4, 2, awk_false, NULL },
+    { "rte_hexdump", do_rte_hexdump, 10, 2, awk_false, NULL },
 
 };
 
-static awk_bool_t (*init_func)(void) = do_rte_hexdump;
+static awk_bool_t (*init_func)(void) = NULL;
 static const char *ext_version = "1.00";
 
 dl_load_func(func_table, rte_hexdump, "")
