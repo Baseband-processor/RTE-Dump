@@ -156,6 +156,19 @@ for now only one:
 This module won't die here, this is only the first starting point, hope to update monthly.
 
 
+AWK VERSION
+====================================0
+
+I've made a small awk library for using the rte_hexdump function, if interested just type
+
+```shell
+cd awk/
+sudo make all
+```
+
+this will compile the .c file, copy the shared object into the awk library folder and run the default test.
+
+
 **Requests and collaborations**
 
 Feel free to email me at <EdoardoMantovani@gmail.com>
