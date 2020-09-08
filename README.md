@@ -157,7 +157,7 @@ This module won't die here, this is only the first starting point, hope to updat
 
 
 AWK VERSION
-====================================0
+====================================
 
 I've made a small awk library for using the rte_hexdump function, if interested just type
 
