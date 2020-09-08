@@ -146,7 +146,7 @@ sudo make install
 
 **EXPORTED FUNCTIONS**
 
-for now only one:
+for now are implement only 2 functions:
 
 * rte_hexdump
 * rte_memdump 
