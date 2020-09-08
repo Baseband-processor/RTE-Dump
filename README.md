@@ -171,7 +171,7 @@ this will compile the .c file, copy the shared object into the awk library folde
 
 **Requests and collaborations**
 
-Feel free to email me at <EdoardoMantovani@gmail.com>
+Feel free to email me at <Baseband@cpan.org>
 - [x] I am open for suggestions, code improvement, collaboration and other requests
 
 **COPYRIGHT AND LICENCE**
