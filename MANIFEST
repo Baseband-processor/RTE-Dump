@@ -1,4 +1,3 @@
-Changes
 lib/RTE/Dump.pm
 Dump.xs
 Makefile.PL
@@ -9,4 +8,5 @@ META.yml                                 Module YAML meta-data (added by MakeMak
 META.json                                Module JSON meta-data (added by MakeMaker)
 examples/ret.pl
 t/load-lib.t
+t/dump-file.t
 dump.gif
