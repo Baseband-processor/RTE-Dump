@@ -3,6 +3,8 @@
 #Made by Edoardo Mantovani,2020
 
 use Test;
-sub BEGIN{ plan_test => 1 }
-use RTE::Dump qw( :dump_hex );
+use strict;
+use warnings;
+BEGIN{ plan tests => 1 }
+use RTE::Dump;
 ok(1);
