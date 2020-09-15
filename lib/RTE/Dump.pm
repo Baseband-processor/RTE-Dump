@@ -1,5 +1,5 @@
 package RTE::Dump;
-require  v5.22.1;
+
 
 # Made by Edoardo Mantovani,2020
 # initial release
