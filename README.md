@@ -1,7 +1,7 @@
 **RTE::DUMP**
 ====================================================
 
-<img src="https://giphy.com/gifs/L7lyXCW6XqSRQ3aFZg/fullscreen" alt="drawing" width="2000"/>
+<img src="https://media.giphy.com/media/cHLLRNVaqALxCv1Kgb/giphy.gif" alt="drawing" width="2000"/>
 
 
 **BASIC DOCUMENTATION**
