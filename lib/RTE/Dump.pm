@@ -14,7 +14,7 @@ our %EXPORT_TAGS = (
    dump_hex => [qw(
 	rte_hexdump
         rte_memdump
-
+	rte_online_hexdump
    )],
 );
 
