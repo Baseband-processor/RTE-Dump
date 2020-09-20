@@ -6,9 +6,7 @@
 
 **BASIC DOCUMENTATION**
 
-while I was working on dpdk, I found a file named _rte_hexdump.h_ which had only two functions, both had been implemented here.
-
-The suggested use is for dumping memory and printing it to a file.
+while I was working on dpdk, I found a file named _rte_hexdump.h_ which had only two functions, both had been implemented in this simple library which is usefull for dumping memory data regions in _hexdump_ style.
 
 
 RTE_HEXDUMP
@@ -102,7 +100,7 @@ Dump out memory in a hex format with colons between bytes
 **EXAMPLE**
 
 
-```perl                                                                    
+```perl
 
 #!/usr/bin/perl
 
@@ -153,57 +151,55 @@ no warnings;
 
 use RTE::Dump qw(:dump_hex);
 
-print rte_online_hexdump("", \"0xFFFFF", 4096);
+print RTE::Dump::rte_online_hexdump("", \"0xfff", "4096");
 ```
 
 and the output is:
 
 ```
-00000000: |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | SCALAR(0x9b8151c
-00000010: |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | )......(........
-00000130: |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | ...9.../usr/lib/
-00000140: |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | i386-linux-gnu/p
-00000150: |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | erl/5.22/DynaLoa
-00000160: |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | der.pm..1..9.../
-00000170: |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | usr/lib/i386-lin
-00000180: |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | ux-gnu/perl/5.22
-00000190: |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | /DynaLoader.pm..
-000001A0: |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | ...)....5.......
-000001B0: |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | ...S...X........
-000001C0: |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | .....$file..... 
-000001D0: |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | for .irsep$name.
-000001E0: |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 1.......... z...
-000001F0: |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | ...........9.../
-00000200: |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | usr/lib/i386-lin
-00000210: |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | ux-gnu/perl/5.22
-00000220: |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | /DynaLoader.pm..
-00000230: |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | ...)........\e..
-00000240: |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | .......r fo....@
-00000250: |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | arg.:..........d
-00000260: |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | l_expandspec(..H
-00000270: |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | Z......) => ...H
-00000280: |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | Z..HZ..0...9.../
-00000290: |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | usr/lib/i386-lin
-000002A0: |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | ux-gnu/perl/5.22
-000002B0: |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | /DynaLoader.pm..
-000002C0: |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | ...9.../usr/lib/
-000002D0: |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | i386-linux-gnu/p
-000002E0: |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | erl/5.22/DynaLoa
-000002F0: |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | der.pm..b......@
-00000300: |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | ...(].......... 
-00000310: |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | checking in ....
-00000320: |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | ...........HZ...
-00000330: |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | ............j..^
-00000340: |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | ...C........ ..4
-00000840: |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | p.......F......6
-00000850: |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | ....n......f....
-00000860: |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | ........<......<
-00000870: |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | <......`........
-00000880: |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | ....<...<...<...
-00000890: |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | ...8=...<..pp...
-000008A0: |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | ....F......6...h
-00000FF0: |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | .F.,D..PD..HD...
+ at [0x9b54a59], len=4096
+00000000: 53 43 41 4C 41 52 28 30 78 39 61 66 39 35 61 30 | SCALAR(0x9af95a0
+00000010: 29 00 00 31 00 00 00 2F 75 73 72 2F 73 68 61 72 | )..1.../usr/shar
+00000020: 65 2F 70 65 72 6C 2F 35 2E 32 32 2F 45 78 70 6F | e/perl/5.22/Expo
+00000030: 72 74 65 72 2F 48 65 61 76 79 2E 70 6D 00 00 00 | rter/Heavy.pm...
+00000040: 00 00 00 31 00 00 00 2F 75 73 72 2F 73 68 61 72 | ...1.../usr/shar
+00000050: 65 2F 70 65 72 6C 2F 35 2E 32 32 2F 45 78 70 6F | e/perl/5.22/Expo
+00000060: 72 74 65 72 2F 48 65 61 76 79 2E 70 6D 00 00 00 | rter/Heavy.pm...
+00000070: 00 00 00 11 00 00 00 2F 0A 00 B7 C8 A7 EA B7 00 | ......./........
+00000080: 00 00 00 11 00 00 00 20 00 00 00 30 46 B5 09 10 | ....... ...0F...
+00000090: 00 00 00 11 00 00 00 22 00 EA B7 B0 A7 EA B7 00 | ......."........
+000000A0: 00 00 00 29 00 00 00 78 49 B5 09 30 4E B7 09 2F | ...)...xI..0N../
+000000B0: 00 00 00 00 00 00 00 30 00 00 00 00 00 00 00 00 | .......0........
+000000C0: 00 00 00 00 00 00 00 28 00 00 00 20 00 00 00 22 | .......(... ..."
+000000D0: 20 69 73 20 6E 6F 74 20 64 65 66 69 6E 65 64 20 |  is not defined 
+000000E0: 69 6E 20 25 00 00 00 00 00 00 00 31 00 00 00 2F | in %.......1.../
+000000F0: 75 73 72 2F 73 68 61 72 65 2F 70 65 72 6C 2F 35 | usr/share/perl/5
+00000100: 2E 32 32 2F 45 78 70 6F 72 74 65 72 2F 48 65 61 | .22/Exporter/Hea
+00000110: 76 79 2E 70 6D 00 09 38 E3 B6 09 11 00 00 00 64 | vy.pm..8.......d
+00000120: 65 6C 00 72 74 20 00 48 00 AD 09 11 00 00 00 61 | el.rt .H.......a
+00000130: 64 64 00 10 A8 EA B7 F4 00 B6 09 11 00 00 00 00 | dd..............
+00000140: 48 B7 09 B0 A7 EA B7 44 00 B6 09 19 00 00 00 28 | H......D.......(
+00000150: 3F 5E 3A 5E 5C 64 29 00 00 00 00 00 00 00 00 00 | ?^:^\d).........
+00000160: 00 00 00 31 00 00 00 2F 75 73 72 2F 73 68 61 72 | ...1.../usr/shar
+00000170: 65 2F 70 65 72 6C 2F 35 2E 32 32 2F 45 78 70 6F | e/perl/5.22/Expo
+00000180: 72 74 65 72 2F 48 65 61 76 79 2E 70 6D 00 B7 30 | rter/Heavy.pm..0
+00000190: 00 00 00 39 00 00 00 2F 75 73 72 2F 73 68 61 72 | ...9.../usr/shar
+000001A0: 65 2F 70 65 72 6C 2F 35 2E 32 32 2F 45 78 70 6F | e/perl/5.22/Expo
+000001B0: 72 74 65 72 2F 48 65 61 76 79 2E 70 6D 00 09 00 | rter/Heavy.pm...
+000001C0: 00 00 00 00 00 00 00 38 00 00 00 E9 01 00 00 F0 | .......8........
+000001D0: B0 AD 09 F0 B0 AD 09 D8 5E B1 09 00 00 00 00 F0 | ........^.......
+000001E0: B0 AD 09 00 00 00 00 00 00 00 00 F0 B0 AD 09 00 | ................
+000001F0: 00 00 00 00 00 00 00 00 00 00 00 F0 B0 AD 09 00 | ................
+00000200: 00 00 00 F0 B0 AD 09 00 00 00 00 00 00 00 00 F0 | ................
+00000210: B0 AD 09 00 00 00 00 00 00 00 00 00 00 00 00 00 | ................
+00000220: 00 00 00 F0 B0 AD 09 F0 B0 AD 09 F0 B0 AD 09 00 | ................
+00000230: 00 00 00 00 00 00 00 00 00 00 00 F0 B0 AD 09 F0 | ................
+00000240: B0 AD 09 00 00 00 00 00 00 00 00 F0 B0 AD 09 F0 | ................
+
+# etc etc etc
+
 ```
+
 
 **REQUIREMENTS**
 
@@ -215,10 +211,12 @@ and the output is:
 for installing RTE::Dump simply execute:
 
 ```shell
+
 sudo perl Makefile.PL
 sudo make
 sudo make test
 sudo make install
+
 ```
 
 **EXPORTED FUNCTIONS**
@@ -245,7 +243,7 @@ cd awk/
 sudo make all
 ```
 
-this will compile the .c file, copy the shared object into the awk library folder and run the default test.
+this will compile the .c file, copy the shared object into the awk library folder and run the default test, still in development, stay tuned!
 
 
 **Requests and collaborations**
@@ -261,6 +259,5 @@ Copyright (C) 2020 by *Edoardo Mantovani*, aka BASEBAND
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself, either Perl version 5.8.8 or,
 at your option, any later version of Perl 5 you may have available.
-
 
 <img src="https://media.giphy.com/media/cHLLRNVaqALxCv1Kgb/giphy.gif" alt="drawing" width="2000"/>
