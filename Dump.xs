@@ -50,7 +50,7 @@ rte_hexdump(f,  title,  buf,  len)
 		}
 		fprintf(f, "%s\n", line);
 	}
-	PerlIO_flush(f);
+	fflush(f);
 
 
 void
@@ -79,8 +79,7 @@ rte_memdump(f, title, buf,  len)
 	if (out > 0)
 		fprintf(f, "%s", line);
 	fprintf(f, "\n");
-
-	PerlIO_flush(f);
+	fflush(f);
 
 
 char
