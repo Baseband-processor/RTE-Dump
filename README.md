@@ -3,6 +3,12 @@
 
 <img src="https://media.giphy.com/media/cHLLRNVaqALxCv1Kgb/giphy.gif" alt="drawing" width="2000"/>
 
+![license](https://img.shields.io/github/license/Baseband-processor/RTE-Dump) ![size](https://img.shields.io/github/languages/code-size/Baseband-processor/RTE-Dump)  ![release-date](https://img.shields.io/github/release-date/Baseband-processor/RTE-Dump)
+
+**WHO I AM?**
+
+Click [Here](https://github.com/Baseband-processor/Baseband-processor)
+
 
 **BASIC DOCUMENTATION**
 
@@ -278,6 +284,6 @@ DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
 SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
 CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE._
 
 <img src="https://media.giphy.com/media/cHLLRNVaqALxCv1Kgb/giphy.gif" alt="drawing" width="2000"/>
