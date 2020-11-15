@@ -1,17 +1,19 @@
 #!/usr/bin/perl
 
-#Made by Edoardo Mantovani,2020
+# Made by Edoardo Mantovani,2020
+# Test file dumper
 
-use Test;
 use strict;
 no strict 'subs';
 no warnings;
-BEGIN{ plan tests => 1 }
-use RTE::Dump qw( :dump_hex);
+use Test;
+
+BEGIN{ plan tests => 2 }
+use RTE::Dump qw( :dump_hex );
 
 my $file = 'test.txt';
 open(FILE, '>', $file);
-RTE::Dump::rte_hexdump(\FILE, "test", \"0xFFFFF", 1024);
+rte_hexdump(\FILE, "test", \"0xFFFFF", 1024);
 
 
 if(-e $file && ( -s $file != 0 ) ){ 
@@ -21,3 +23,4 @@ if(-e $file && ( -s $file != 0 ) ){
 	return -1; # bad 	
 }
 
+ok(1);
