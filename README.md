@@ -157,7 +157,7 @@ no warnings;
 
 use RTE::Dump qw(:dump_hex);
 
-print RTE::Dump::rte_online_hexdump("", \"0xfff", "4096");
+print rte_online_hexdump("", \"0xfff", "4096");
 ```
 
 and the output is:
