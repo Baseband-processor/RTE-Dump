@@ -6,10 +6,13 @@ no strict;
 no warnings;
 use RTE::Dump qw(:dump_hex);
 
+# do something, trigger the perl :V
+
+
 my $file = 'dumper.txt';
 
 open(FILE, '>', $file);
 
-print RTE::Dump::rte_hexdump(\FILE, "AAAAAA", "0x999999999", 22000);
+print rte_hexdump(\FILE, "AAAAAA", "0x999999999", 22000);
 
 }
